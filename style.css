@@ -1,4 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+nav{
+    height: 60px;
+    width: 520px;
+    background: #120a21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+}
+nav:hover::after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 530px;
+    background: #1f1433;
+    z-index: -1;
+    border-radius: 10px;
+    box-shadow: 7px 4px 10px blue;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate {
+    0%{filter: hue-rotate(0deg);}
+    100%{filter: hue-rotate(360deg);}
+}
+
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 0px 23px;
+    position: relative;
+    z-index: 1;
+}
+nav span
+{
+    position: absolute;
+    height: 59px;
+    width: 95px;
+    left: 0;
+    top: 0;
+    background: orangered;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .6s;
+}
+nav a:nth-child(1):hover ~ span{
+    left: 0;
+
+}
+nav a:nth-child(2):hover ~ span{
+    left: 100px;
+
+}
+nav a:nth-child(3):hover ~ span{
+    left: 210px;
+}
+nav a:nth-child(4):hover ~ span{
+    left: 325px;
+}
+nav a:nth-child(5):hover ~ span{
+    left: 425px;
 }
